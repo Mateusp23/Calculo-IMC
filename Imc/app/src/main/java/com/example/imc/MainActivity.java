@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity {
     public void btnCalcularOnClick(View v){
 
         editAltura     = findViewById(R.id.editAltura);
-        editPeso   = findViewById(R.id.editPeso);
-        textResultado       = findViewById(R.id.textResultado);
+        editPeso       = findViewById(R.id.editPeso);
+        textResultado  = findViewById(R.id.textResultado);
 
         int peso = Integer.parseInt(editPeso.getText().toString());
-        double altura = Float.parseFloat(editAltura.getText().toString());
+        float altura = Float.parseFloat(editAltura.getText().toString());
 
-        double resultado = peso / (altura * altura);
+        float resultado = peso / (altura * altura);
         if(resultado < 19){
             //abaixo
             textResultado.setText("Abaixo do peso!");
